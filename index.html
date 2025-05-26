@@ -8,6 +8,7 @@
     <meta name="format-detection" content="telephone=no, address=no, date=no">
     <title>Okna</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/main.min.js" defer></script>
@@ -532,7 +533,18 @@
               </div>
               <div class="input__wrapper">
                 <label class="form__label" for="tel">Номер телефона</label>
-                <input class="input" type="tel" name="tel" id="tel">
+                <div class="input__tel-holder">
+
+                  <select data-choice>
+                    <option>Напишите
+                      В Telegram</option>
+                    <option>Ватсап</option>
+                    <option>Вк</option>
+                  </select>
+
+
+                  <input class="input" type="tel" name="tel" id="tel" placeholder="+7">
+                </div>
               </div>
 
             </div>
@@ -546,7 +558,7 @@
               <input class="checkbox" id="checkbox" type="checkbox">
               <label for="checkbox" class="checkbox__label">
                 <span class="form__label checkbox__text">
-                  Согласие на обработку персональных данных
+                  Согласие на <a class="checkbox__link" href="#">обработку персональных данных</a>
                 </span>
               </label>
             </div>
@@ -667,7 +679,7 @@
       <div class="footer__down-inner">
         <p class="footer__down-text">© Все права защищены 2018 "Мастерская Безрамных Конструкций". Москва и Московская
           область.</p>
-        <p class="footer__down-text">2025 Nikita Global site development</p>
+        <a class="footer__down-text" href="">2025 Nikita Global site development</a>
       </div>
     </div>
   </footer>
@@ -697,7 +709,16 @@
                 </div>
                 <div class="input__wrapper">
                   <label class="form__label" for="modal-tel">Номер телефона</label>
-                  <input class="input input__modal" type="tel" name="tel" id="modal-tel">
+                  <div class="input__tel-holder">
+                    <!--Roman Ageev-->
+                    <select data-choice-modal>
+                      <option>Напишите
+                        В Telegram</option>
+                      <option>Ватсап</option>
+                      <option>Вк</option>
+                    </select>
+                    <input class="input input__modal" type="tel" name="tel" id="modal-tel" placeholder="+7">
+                  </div>
                 </div>
 
               </div>
@@ -712,7 +733,8 @@
                   <input class="checkbox" id="modal-checkbox" type="checkbox">
                   <label for="modal-checkbox" class="checkbox__label">
                     <span class="form__label checkbox__text checkbox__text--modal">
-                      Согласие на обработку персональных данных
+                      Согласие на <a class="checkbox__link checkbox__link--modal" href="#">обработку персональных
+                        данных</a>
                     </span>
                   </label>
                 </div>
@@ -756,6 +778,7 @@
   </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 </body>
 
 </html>
